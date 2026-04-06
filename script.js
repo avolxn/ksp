@@ -1,11 +1,28 @@
 let cart = [];
 
+const CART_STORAGE_KEY = "book-catalog-cart";
+
 const products = document.querySelectorAll(".product");
 const cartItems = document.getElementById("cart-items");
 const totalElement = document.getElementById("cart-total");
 const filterSelect = document.getElementById("filter-category");
 const clearCartButton = document.getElementById("clear-cart-btn");
 const payButton = document.getElementById("pay-btn");
+
+const saveCart = () => {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+};
+
+const loadCart = () => {
+    const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+    if (!savedCart) return;
+    try {
+        const parsedCart = JSON.parse(savedCart);
+        if (Array.isArray(parsedCart)) cart = parsedCart;
+    } catch {
+        localStorage.removeItem(CART_STORAGE_KEY);
+    }
+};
 
 filterSelect.addEventListener("change", function() {
     const selected = filterSelect.value;
@@ -37,6 +54,7 @@ const renderCart = () => {
         });
     }
     totalElement.textContent = "Итого: " + calculateTotal() + " руб.";
+    saveCart();
 };
 
 const addToCart = (product) => {
@@ -77,4 +95,5 @@ payButton.addEventListener("click", function() {
     }
 });
 
+loadCart();
 renderCart();
