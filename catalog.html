@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Каталог - Книжный каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <h1>Каталог</h1>
+
+    <label for="filter-category">Фильтр по жанру:</label>
+    <select id="filter-category">
+        <option value="all">Все</option>
+        <option value="Роман-эпопея">Роман-эпопея</option>
+        <option value="Роман">Роман</option>
+        <option value="Психологический роман">Психологический роман</option>
+    </select>
+
+    <div class="product" data-name="Война и мир" data-price="599" data-category="Роман-эпопея">
+        <img src="images/book1-small.jpg" alt="Война и мир" width="150">
+        <br>
+        <a href="book1.html">Война и мир</a>
+        <br>
+        <span>599 руб.</span>
+        <br>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <div class="product" data-name="Мастер и Маргарита" data-price="399" data-category="Роман">
+        <img src="images/book2-small.png" alt="Мастер и Маргарита" width="150">
+        <br>
+        <a href="book2.html">Мастер и Маргарита</a>
+        <br>
+        <span>399 руб.</span>
+        <br>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <div class="product" data-name="Преступление и наказание" data-price="499" data-category="Психологический роман">
+        <img src="images/book3-small.png" alt="Преступление и наказание" width="150">
+        <br>
+        <a href="book3.html">Преступление и наказание</a>
+        <br>
+        <span>499 руб.</span>
+        <br>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <hr>
+
+    <h2>Корзина</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Итого: 0 руб.</p>
+    <button id="clear-cart-btn" type="button">Очистить корзину</button>
+    <button id="pay-btn">Оплатить</button>
+
+    <hr>
+
+    <p>&copy; Все права защищены</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

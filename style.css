@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(236, 240, 241);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li a {
+    color: rgb(52, 73, 94);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+}
+.product-heading {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgb(189, 195, 199);
+    padding: 10px;
+}
+.product-brief {
+    color: rgb(44, 62, 80);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+.product-detailed {
+    color: rgb(52, 73, 94);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.product-characteristics {
+    color: rgb(41, 128, 185);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><circle cx="6" cy="6" r="5" fill="green"/></svg>');
+}
